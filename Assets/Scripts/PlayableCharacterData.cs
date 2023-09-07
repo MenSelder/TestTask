@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class PlayableCharacterData : DataBase
 {
     [SerializeField] private string dataFileName;
+    //Data data = null
 
     // Make private !!
 
