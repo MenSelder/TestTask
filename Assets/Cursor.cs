@@ -5,7 +5,7 @@ public class Cursor : MonoBehaviour
 {
     // info holder ...
 
-    Type collideType = typeof(DataBase);
+    Type collideType = typeof(DataHolder);
     private Transform selectedObjct = null;
 
     private void Update()

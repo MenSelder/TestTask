@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
-public class DataHandler
+public class DataHandlerJSON : IDataHandler
 {
     private const string DATA_FOLDER = "Datas";
 
@@ -13,7 +14,7 @@ public class DataHandler
             + Path.AltDirectorySeparatorChar + fileName + ".json";
     }
 
-    public void SaveData(DataBase data, string fileName)
+    public void SaveData(IDataContainer data, string fileName)
     {
         string path = GetPath(fileName);
 
@@ -22,17 +23,28 @@ public class DataHandler
         streamWriter.Write(json);
     }
 
-    public void LoadData(string fileName, object obj)
+    public T LoadData<T>(string fileName) where T : IDataContainer
     {
         string path = GetPath(fileName);
 
         using StreamReader streamReader = new StreamReader(path);
         string json = streamReader.ReadToEnd();
 
-        JsonUtility.FromJsonOverwrite(json, obj);
-
-        //T data = JsonUtility.FromJsonOverwrite<T>(json, obj);
-        //return data;
+        T data = JsonUtility.FromJson<T>(json);
+        return data;
     }
+
+    //public void LoadData(string fileName, object obj)
+    //{
+    //    string path = GetPath(fileName);
+
+    //    using StreamReader streamReader = new StreamReader(path);
+    //    string json = streamReader.ReadToEnd();
+
+    //    JsonUtility.FromJsonOverwrite(json, obj);
+
+    //    //T data = JsonUtility.FromJsonOverwrite<T>(json, obj);
+    //    //return data;
+    //}
 
 }
