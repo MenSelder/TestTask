@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public interface IDataContainer
 {
-    //print data...
+    public void RequestData();
+    public void PrintData();
 }
