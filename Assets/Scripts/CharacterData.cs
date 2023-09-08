@@ -5,22 +5,22 @@ public class CharacterData : IDataContainer
     public string AvatarSpritePath;
     public string ModelPath;
 
-    public CharacterData(string name, int level, string avatarSpriteName, string modeIPath)
+    public CharacterData(string name, int level, string avatarSpritePath, string modeIPath)
     {
-        this.Name = name;
-        this.Level = level;
-        this.AvatarSpritePath = avatarSpriteName;
-        this.ModelPath = modeIPath;
+        Name = name;
+        Level = level;
+        AvatarSpritePath = avatarSpritePath;
+        ModelPath = modeIPath;
     }
 
     public void SetData(IDataContainer newData)
     {
         var data = newData as CharacterData;
 
-        this.Name = data.Name;
-        this.Level = data.Level;
-        this.AvatarSpritePath = data.AvatarSpritePath;
-        this.ModelPath = data.ModelPath;
+        Name = data.Name;
+        Level = data.Level;
+        AvatarSpritePath = data.AvatarSpritePath;
+        ModelPath = data.ModelPath;
     }
 
     public override string ToString()

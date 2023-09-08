@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +15,7 @@ public class SelectedLevelDataHolderUI : DataWindowUI<LevelData>
         idHolder.text = levelData.LevelId.ToString();
         descriptionHolder.text = levelData.Description;
 
-        var sprite = Resources.Load<Sprite>(levelData.IconSpritePath); //?
+        var sprite = Resources.Load<Sprite>(levelData.IconSpritePath);
         iconHolder.sprite = sprite;
 
         Data = levelData;

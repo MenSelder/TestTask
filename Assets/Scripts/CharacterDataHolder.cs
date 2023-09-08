@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class CharacterDataHolder : DataHolder
 {
@@ -30,10 +27,10 @@ public class CharacterDataHolder : DataHolder
         Debug.Log(this.Data.ToString());
     }
 
-    [ContextMenu("test_))")]
-    public void Test_0()
+    [ContextMenu("Set some data")]
+    public void Test_SetData()
     {
-        CharacterData newData = new CharacterData("Neko", 13, "Sprites/CharacterSprite_1", "Characters/Character_2");
+        var newData = new CharacterData("Neko", 13, "Sprites/CharacterSprite_1", "Characters/Character_2");
         var newData1 = new LevelData("bath", "bathroom", 0, "Sprites/LevelSprite_1");
         Data = newData;
     }

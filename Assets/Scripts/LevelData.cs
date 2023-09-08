@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class LevelData : IDataContainer
 {
     public string Name;
@@ -9,22 +5,22 @@ public class LevelData : IDataContainer
     public int LevelId;
     public string IconSpritePath;
 
-    public LevelData(string name, string description, int levelId, string iconSpriteName)
+    public LevelData(string name, string description, int levelId, string iconSpritePath)
     {
-        this.Name = name;
-        this.Description = description;
-        this.LevelId = levelId;
-        this.IconSpritePath = iconSpriteName;
+        Name = name;
+        Description = description;
+        LevelId = levelId;
+        IconSpritePath = iconSpritePath;
     }
 
     public void SetData(IDataContainer newData)
     {
         var data = newData as LevelData;
 
-        this.Name = data.Name;
-        this.Description = data.Description;
-        this.LevelId = data.LevelId;
-        this.IconSpritePath = data.IconSpritePath;
+        Name = data.Name;
+        Description = data.Description;
+        LevelId = data.LevelId;
+        IconSpritePath = data.IconSpritePath;
     }
 
     public override string ToString()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
 public class SelectedPlayerDataHolderUI : DataWindowUI<CharacterData>
 {
     [SerializeField] private TextMeshProUGUI nameHolder;

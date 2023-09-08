@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System;
 
 public class DataHandlerJSON : IDataHandler
 {
-    private const string DATA_FOLDER = "Datas";
+    private const string DATA_FOLDER = "Resources/Datas";
 
     private string GetPath(string fileName)
     {

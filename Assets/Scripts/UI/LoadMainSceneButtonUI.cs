@@ -11,5 +11,7 @@ public class LoadMainSceneButtonUI : MonoBehaviour
             int mainSceneId = 0;
             SceneManager.LoadScene(mainSceneId);
         });
+
+        GetComponent<Button>().Select();
     }
 }
