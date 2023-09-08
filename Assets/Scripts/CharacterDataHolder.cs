@@ -5,25 +5,23 @@ using UnityEngine.EventSystems;
 
 public class CharacterDataHolder : DataHolder
 {
-    [SerializeField] private string dataFileName; 
-
     public void LoadData(IDataHandler dataHandler)
     {
-        LoadData<CharacterData>(dataFileName, dataHandler);
+        LoadData<CharacterData>(dataPath, dataHandler);
     }
 
     [ContextMenu("SaveCharData")]
     public void Test_SaveCharData()
     {
         var dataHandler = new DataHandlerJSON();
-        SaveData(dataFileName, dataHandler);
+        SaveData(dataPath, dataHandler);
     }
 
     [ContextMenu("LoadCharData")]
     public void Test_LoadCharData()
     {
         var dataHandler = new DataHandlerJSON();
-        LoadData<CharacterData>(dataFileName, dataHandler);
+        LoadData<CharacterData>(dataPath, dataHandler);
     }
 
     [ContextMenu("PrintData")]

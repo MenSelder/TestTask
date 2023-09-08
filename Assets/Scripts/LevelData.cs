@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class LevelData : IDataContainer
 {
-    public string name;
-    public string description;
-    public int levelId;
-    public string iconSpriteName;
+    public string Name;
+    public string Description;
+    public int LevelId;
+    public string IconSpritePath;
 
     public LevelData(string name, string description, int levelId, string iconSpriteName)
     {
-        this.name = name;
-        this.description = description;
-        this.levelId = levelId;
-        this.iconSpriteName = iconSpriteName;
+        this.Name = name;
+        this.Description = description;
+        this.LevelId = levelId;
+        this.IconSpritePath = iconSpriteName;
     }
 
     public void SetData(IDataContainer newData)
     {
         var data = newData as LevelData;
 
-        this.name = data.name;
-        this.description = data.description;
-        this.levelId = data.levelId;
-        this.iconSpriteName = data.iconSpriteName;
+        this.Name = data.Name;
+        this.Description = data.Description;
+        this.LevelId = data.LevelId;
+        this.IconSpritePath = data.IconSpritePath;
     }
 
     public override string ToString()
     {
-        return string.Format("name: {0}; description {1}", name, description);
+        return string.Format("name: {0}; description {1}", Name, Description);
     }
 }

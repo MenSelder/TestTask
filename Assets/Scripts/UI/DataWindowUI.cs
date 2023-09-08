@@ -8,6 +8,8 @@ public abstract class DataWindowUI<T> : MonoBehaviour
 {
     [SerializeField] private Button closeButton;
 
+    public T Data { get; protected set; }
+
     private void Awake()
     {
         closeButton.onClick.AddListener(() => Destroy(gameObject));

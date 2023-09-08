@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO.Enumeration;
 using UnityEngine;
 
-public class DataHolder : MonoBehaviour, IDataHolder
+public abstract class DataHolder : MonoBehaviour, IDataHolder
 {
+    [SerializeField] protected string dataPath;
+
     public IDataContainer Data { get; protected set; }
 
     public void ClearData() => Data = null;
