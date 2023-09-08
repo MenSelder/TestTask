@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DataHolder : MonoBehaviour, IDataHolder
 {
-    //public IDataContainer Data { get; protected set; }
     public IDataContainer Data { get; protected set; }
 
     public void ClearData() => Data = null;

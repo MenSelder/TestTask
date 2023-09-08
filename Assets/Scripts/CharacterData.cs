@@ -2,15 +2,15 @@ public class CharacterData : IDataContainer
 {
     public string name;
     public int level;
-    public int avatarId;
-    public int modelId;
+    public string avatarSpritePath;
+    public string modelPath;
 
-    public CharacterData(string name, int level, int avatarId, int modelId)
+    public CharacterData(string name, int level, string avatarSpriteName, string modeIPath)
     {
         this.name = name;
         this.level = level;
-        this.avatarId = avatarId;
-        this.modelId = modelId;
+        this.avatarSpritePath = avatarSpriteName;
+        this.modelPath = modeIPath;
     }
 
     public void SetData(IDataContainer newData)
@@ -19,11 +19,11 @@ public class CharacterData : IDataContainer
 
         this.name = data.name;
         this.level = data.level;
-        this.avatarId = data.avatarId;
-        this.modelId = data.modelId;
+        this.avatarSpritePath = data.avatarSpritePath;
+        this.modelPath = data.modelPath;
     }
 
-    public string ToString()
+    public override string ToString()
     {
         return string.Format("name: {0}; level {1}", name, level);
     }

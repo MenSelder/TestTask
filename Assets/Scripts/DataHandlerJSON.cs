@@ -33,18 +33,4 @@ public class DataHandlerJSON : IDataHandler
         T data = JsonUtility.FromJson<T>(json);
         return data;
     }
-
-    //public void LoadData(string fileName, object obj)
-    //{
-    //    string path = GetPath(fileName);
-
-    //    using StreamReader streamReader = new StreamReader(path);
-    //    string json = streamReader.ReadToEnd();
-
-    //    JsonUtility.FromJsonOverwrite(json, obj);
-
-    //    //T data = JsonUtility.FromJsonOverwrite<T>(json, obj);
-    //    //return data;
-    //}
-
 }

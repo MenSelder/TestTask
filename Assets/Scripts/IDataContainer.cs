@@ -5,7 +5,7 @@ using UnityEngine;
 
 public interface IDataContainer
 {
-    public void SetData(IDataContainer data);
+    public void SetData(IDataContainer newData);
 
     public string ToString();
 }
